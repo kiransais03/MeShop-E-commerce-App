@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guduru Kiran Sai">
+    <meta name="description" content="MEShop for all your personal needs">
+    <meta name="keywords" content="Mens wear,Woman's wear,electronics,Online order,Cash on delivery">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Login- MeShop</title>
+    <link rel="stylesheet" href="./style-login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="navbar-container">
+            <div class="left-nav">
+                <h1 class="home">MeShop</h1>
+            </div>
+            <div class="right-nav">
+                <div class="home">Home</div>
+                <div class="login-btn">Login</div>
+                <div class="signup-btn">SignUp</div>
+                <div>My Cart</div>
+                <div class="profile-btn">Profile</div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="main-container">
+            <form action="/" id="loginform" method="post">
+                <h1>Login</h1>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <div class="comments"></div>
+                <button id="submit-btn" type="submit">Log In</button>
+            </form>
+        </div>
+    </main>
+    <script src="./script-login.js"></script>
+</body>
+</html>
