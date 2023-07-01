@@ -67,7 +67,6 @@ form input {
 }
 
 input::placeholder {
-    color: black;
     font-size: 18px;
 }
 

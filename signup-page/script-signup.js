@@ -27,7 +27,7 @@ if(fname && lname && email && password && confirmpass)
         
         if(ifusersarrPresentOrNot('users'))
         {
-          let usersJson=localStorage.getItem(users);
+          let usersJson=localStorage.getItem('users');
           let usersarr=JSON.parse(usersJson);
           createuserobj (usersarr,fname,lname,email,password);
         } else {

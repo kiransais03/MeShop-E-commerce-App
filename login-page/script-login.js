@@ -13,9 +13,9 @@ function loginfunction(event) {
     let password=document.getElementsByName('password')[0].value;
 
     //Validations if else
-    if(email && password) { //inputs check
+    if(email.trim() && password.trim()) { //inputs check
       if(checkuserdetails(email)) {  //signup check
-        if(password===currentuserobj.password){  //password check
+        if(password===JSON.parse(currentuserobj).password){  //password check
            localStorage.setItem('curruser',currentuserobj);
             if(document.getElementsByClassName('red')[0])
             {
@@ -60,13 +60,6 @@ function ifusersarrPresentOrNot (users) {
   return localStorage.getItem(users)!==null;
 }
 
-function createuserobj (usersarr,fname,lname,email,password) {  //Creates a new user object and stores in local storage
-         let newuserid=usersarr.length+1;
-         let dataobj={id:newuserid,fname:fname,lname:lname,email:email,password:password};
-         usersarr.push(dataobj);
-         let stringarr=JSON.stringify(usersarr);
-         localStorage.setItem('users',`${stringarr}`);
-}
 
 function checkuserdetails(emailid) {  //Check if the user already registered
  try {
@@ -77,7 +70,7 @@ function checkuserdetails(emailid) {  //Check if the user already registered
      {
       if (usersarr1[i].email === emailid)
       {
-        currentuserobj=usersarr1[i];
+        currentuserobj=JSON.stringify(usersarr1[i]);
         bool=1;
       }
      }

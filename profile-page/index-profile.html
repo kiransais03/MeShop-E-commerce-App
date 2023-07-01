@@ -32,19 +32,19 @@
         <div class="main-container">
             <form action="/" id="my-profile" method="post">
                 <h1>My Profile</h1>
-                <input type="text" id="fname" name="fname" placeholder="First Name" required>
-                <input type="text" id="lname" name="lname" placeholder="Last Name" required>
-                <input type="email" id="email" name="email" placeholder="Email" disabled>
-                <div class="comments"></div>
+                <input type="text" id="fname" name="fname" placeholder="First Name" onkeydown="keydownfunc(event)" required>
+                <input type="text" id="lname" name="lname" placeholder="Last Name" onkeydown="keydownfunc(event)" required>
+                <input type="email" id="email" name="email" placeholder="Email" onkeydown="keydownfunc(event)" disabled>
+                <div class="comments1"></div>
                 <button class="submit-btn savename-btn" type="submit">Save Info</button>
             </form>
           
             <form action="/" id="edit-password" method="post">
                <h1>Edit Password</h1>
-              <input type="password" id="oldpassword" name="oldpassword" placeholder="Old Password" required>
-              <input type="password" id="newpassword" name="newpassword" placeholder="New Password" required>
-              <input type="password" id="confirmnewpassword" name="confirmnewpassword" placeholder="Confirm New Password" required>
-              <div class="comments"></div>
+              <input type="password" id="oldpassword" name="oldpassword" placeholder="Old Password" onkeydown="keydownfunc(event)" required>
+              <input type="password" id="newpassword" name="newpassword" placeholder="New Password" onkeydown="keydownfunc(event)" required>
+              <input type="password" id="confirmnewpassword" name="confirmnewpassword" placeholder="Confirm New Password" onkeydown="keydownfunc(event)" required>
+              <div class="comments2"></div>
               <button class="submit-btn savepass-btn" type="submit">Change Password</button>
               <button class="submit-btn logout-btn" type="button">Logout</button>
             </form> <br>
