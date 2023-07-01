@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Guduru Kiran Sai">
+    <meta name="description" content="MEShop for all your personal needs">
+    <meta name="keywords" content="Mens wear,Woman's wear,electronics,Online order,Cash on delivery">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>MeShop-Online Shopping for Mobiles,Clothes,Electronics</title>
+    <link type="image/png" rel="icon" href="../images/icons8-shop-96.png">
+    <link rel="stylesheet" href="./style-shop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="navbar-container">
+            <div class="left-nav">
+                <img src="../images/icons8-shop-96.png" id="logo" alt="logo">
+                <h1 class="home">MeShop</h1>
+            </div>
+            <div class="right-nav">
+                <div class="home">Home</div>
+                <div class="login-btn">Login</div>
+                <div class="signup-btn">SignUp</div>
+                <div class="cart-btn">My Cart</div>
+                <divc class="profile-btn">Profile</div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="main-container">
+           <div class="left-main">
+               <div class="colors">
+                <h3>Colors</h3>
+                <div>
+                <input type="checkbox" name="red" id="red">
+                <label for="red">Red</label>
+                </div>
+                <div>
+                <input type="checkbox" name="blue" id="blue">
+                <label for="blue">Blue</label>
+                </div>
+                <div>
+                <input type="checkbox" name="green" id="green">
+                <label for="green">Green</label>
+                </div>
+                <div>
+                <input type="checkbox" name="black" id="black">
+                <label for="black">Black</label>
+                </div>
+                <div>
+                <input type="checkbox" name="white" id="white">
+                <label for="white">White</label>
+                </div>
+               </div>
+               <div class="sizes">
+                <h3>Sizes</h3>
+                <div>
+                <input type="checkbox" name="s" id="s">
+                <label for="s">S</label>
+                </div>
+                <div>
+                <input type="checkbox" name="m" id="m">
+                <label for="m">M</label>
+                </div>
+                <div>
+                <input type="checkbox" name="l" id="l">
+                <label for="l">L</label>
+                </div>
+                <div>
+                <input type="checkbox" name="xl" id="xl">
+                <label for="xl">XL</label>
+                </div>
+                </div>
+               <div class="rating">
+                  <h3>Rating</h3>
+                  <input type="range" min="0" max="5" step="1">
+               </div>
+               <div class="price-range">
+                <h3>Price Range</h3>
+                <div>
+                <input type="checkbox" name="zero" id="zero">
+                <label for="zero">$0 to $25</label>
+                </div>
+                 <div>
+                <input type="checkbox" name="twentyfive" id="twentyfive">
+                <label for="twentyfive">$25 to $50</label>
+                </div>
+                <div>
+                <input type="checkbox" name="fifty" id="fifty">
+                <label for="fifty">$50 to $100</label>
+                </div>
+                <div>
+                <input type="checkbox" name="hundred" id="hundred">
+                <label for="hundred">$100 onwards</label>
+                </div>
+               </div>
+               <div class="filterbtn-div">
+                <button id="filterbtn">Apply Filter</button>
+               </div>
+           </div>
+           <div class="right-main">
+              <div class="search-div">
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+                 <div class="inputDiv">
+                 <input type="search" name="searchip" id="searchip" placeholder="Search by product names">
+                 </div>
+              </div>
+              <div class="category-btns">
+                <button id="all" class="category-selected">All</button>
+                <button id="mens">Mens</button>
+                <button id="womens">Womens</button>
+                <button id="jewellery">Jewellery</button>
+                <button id="electronics">Electronics</button>
+              </div>
+              <div class="items-container">
+                <div class="mens-div">
+                    <h3>Men's Clothing</h3>
+
+                    <div class="card">
+                        <div class="itemimg-div">
+                        <img src="../images/image 1.png" style="width:220px;height:260px"alt="img">
+                        </div>
+                        <div class="data-div">
+                            <div class="name"><h4>Shirt Blue Colour</h4></div>
+                             <div class="costsize-div">
+                                <div>$100</div>
+                                <div>M</div>
+                             </div>
+                             <div class="colors"> 
+                                Colors: <button class="blue-btn"></button>
+                                <button class="green-btn" ></button>
+                                <button class="orange-btn" ></button>
+                             </div>
+                             <div class="rating">Rating: ⭐⭐⭐</div>
+                             <div class="addcartbtn-div">
+                                <button class="addcart-btn">Add To Cart</button>
+                             </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="womens-div">
+                    <h3>Women's Clothing</h3>
+                </div>
+                <div class="jewellery-div">
+                    <h3>Jewellery</h3>
+                </div>
+                <div class="electronics-div">
+                    <h3>Electronics</h3>
+                </div>
+              </div>
+           </div>
+        </div>
+    </main>
+    <script src="./script-profile.js"></script>
+</body>
+</html>

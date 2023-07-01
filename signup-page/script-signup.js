@@ -142,6 +142,7 @@ Array.from(homepage).forEach((element)=>{element.addEventListener('click',(event
   })
 
   Array.from(profilebtn).forEach((element)=>{element.addEventListener('click',(event)=>{
+    alert('Please Login!')
     let a=document.createElement('a');
     a.href='../profile-page/index-profile.html';
     a.click();

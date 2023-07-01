@@ -19,6 +19,17 @@ body {
     cursor: pointer;
 }
 
+.navbar-container .left-nav {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+#logo {
+    width:30px;
+    height: 30px;
+}
+
 .navbar-container .right-nav div:hover {
   text-decoration: underline;
 }
