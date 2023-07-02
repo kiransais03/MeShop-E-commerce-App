@@ -1,7 +1,7 @@
 body {
-    max-width: 1600px;
     font-family: 'Inter', sans-serif;
     margin:0 auto;
+    max-width: 1600px;
 }
 
 
@@ -70,6 +70,7 @@ h1 {
     display: flex;
     flex-direction: column;
     width: fit-content;
+    max-width: 135px;
     background-color: #000000;
     color: #FFFFFF;
     size: 18px;
@@ -100,15 +101,16 @@ h1 {
 /* //Right Main */
 
 .right-main {
-    margin-top: 15px;
+    margin: 15px 0;
     padding: 0 15px;
+    max-width: 1435px;
 }
 
 /* //Card */
 .card {
     display: flex;
     flex-direction: column;
-    width: 220px;
+    width: 250px;
     border: 2px solid black;
 }
 
@@ -201,6 +203,7 @@ border-radius: 12px;
 .category-btns {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .category-btns button {
@@ -216,6 +219,35 @@ border-radius: 12px;
     color: white;
 }
 
-.mens-div h3 {
+.items-container > div h3 {
     margin-top: 0px;
+    width: 100%;
+}
+
+.items-container > div {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap:20px;
+}
+
+.items-container > div .card .name {
+    line-height: 1.5em;
+    height: 3em;  
+    overflow: hidden;
+}
+
+/* //card add to cart button  */
+
+.changeitems-div {
+  height: 30px;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  background-color: greenyellow;
+}
+
+.changeitems-div .minusbtn,.changeitems-div .plusbtn {
+    width:30px;
+    height: 25px;
+    padding: 0;
 }
