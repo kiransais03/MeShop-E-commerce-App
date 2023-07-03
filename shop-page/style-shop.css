@@ -251,3 +251,15 @@ border-radius: 12px;
     height: 25px;
     padding: 0;
 }
+
+.searchcontainer {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        row-gap:20px;
+}
+
+.searchcontainer .card .name {
+    line-height: 1.5em;
+    height: 3em;  
+    overflow: hidden;
+}
