@@ -1,3 +1,14 @@
+if(localStorage.getItem('accesstoken')) {
+    redirectfunc();
+}
+
+function redirectfunc(event) {   //Redirect function
+let a=document.createElement('a');
+a.href="../shop-page/index-shop.html"
+a.click();
+}
+
+
 let loginbtn = document.getElementsByClassName('login-btn');
 let signupbtn = document.getElementsByClassName('signup-btn');
 let homepage=document.getElementsByClassName('home');

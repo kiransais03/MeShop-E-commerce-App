@@ -102,7 +102,7 @@ function errormessage(msg) {  //Error Messages Function
 
  function redirectfunc(event) {   //Redirect function
     let a=document.createElement('a');
-    a.href="../index.html"
+    a.href="../shop-page/index-shop.html"
     a.click();
 }
 

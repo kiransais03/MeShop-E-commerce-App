@@ -17,6 +17,7 @@
 </head>
 <body>
     <nav>
+        <div class="fixer">
         <div class="navbar-container">
             <div class="left-nav">
                 <img src="../images/icons8-shop-96.png" id="logo" alt="logo">
@@ -30,9 +31,11 @@
                 <divc class="profile-btn">Profile</div>
             </div>
         </div>
+    </div>
     </nav>
     <main>
         <div class="main-container">
+            <div class="emptydiv"></div>
            <div class="left-main">
                <div class="colors">
                 <h3>Colors</h3>
@@ -78,24 +81,32 @@
                 </div>
                <div class="rating">
                   <h3>Rating</h3>
-                  <input type="range" min="0" max="5" step="1">
+                  <input type="range" id='ratingip' min="0" max="5" step="1">
+                  <div class="rating-numbers">
+                    <span>0</span>
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                  </div>
                </div>
                <div class="price-range">
                 <h3>Price Range</h3>
                 <div>
-                <input type="checkbox" name="zero" id="zero">
+                <input type="checkbox" name="zero" id="zero" value="zero">
                 <label for="zero">$0 to $25</label>
                 </div>
                  <div>
-                <input type="checkbox" name="twentyfive" id="twentyfive">
+                <input type="checkbox" name="twentyfive" id="twentyfive" value="twentyfive">
                 <label for="twentyfive">$25 to $50</label>
                 </div>
                 <div>
-                <input type="checkbox" name="fifty" id="fifty">
+                <input type="checkbox" name="fifty" id="fifty" value="fifty">
                 <label for="fifty">$50 to $100</label>
                 </div>
                 <div>
-                <input type="checkbox" name="hundred" id="hundred">
+                <input type="checkbox" name="hundred" id="hundred" value="hundred">
                 <label for="hundred">$100 onwards</label>
                 </div>
                </div>
