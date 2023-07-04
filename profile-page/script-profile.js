@@ -3,6 +3,7 @@
 let loginbtn1 = document.getElementsByClassName('login-btn');
 let signupbtn = document.getElementsByClassName('signup-btn');
 let homepage=document.getElementsByClassName('home');
+let mycartbtn=document.getElementsByClassName('cart-btn');
 let profilebtn=document.getElementsByClassName('profile-btn');
 
 Array.from(loginbtn1).forEach((element)=>{element.addEventListener('click',(event)=>{
@@ -44,6 +45,15 @@ Array.from(homepage).forEach((element)=>{element.addEventListener('click',(event
     a.click();
     console.log('Profile button clicked')});
     })
+
+    Array.from(mycartbtn).forEach((element)=>{element.addEventListener('click',(event)=>{
+      let a=document.createElement('a');
+      a.href='../cart-page/index-cart.html';
+      a.click();
+      console.log('cart button clicked');
+  });
+})
+
   
 
     function redirectfunc(event) {   //Redirect function

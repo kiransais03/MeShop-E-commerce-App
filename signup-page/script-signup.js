@@ -117,6 +117,7 @@ if(localStorage.getItem('accesstoken')) {
 let loginbtn = document.getElementsByClassName('login-btn');
 let signupbtn = document.getElementsByClassName('signup-btn');
 let homepage=document.getElementsByClassName('home');
+let mycartbtn=document.getElementsByClassName('cart-btn');
 let profilebtn=document.getElementsByClassName('profile-btn');
 
 Array.from(loginbtn).forEach((element)=>{element.addEventListener('click',(event)=>{
@@ -148,5 +149,12 @@ Array.from(homepage).forEach((element)=>{element.addEventListener('click',(event
     a.click();
     console.log('Profile button clicked')});
     })
+
+
+
+    Array.from(mycartbtn).forEach((element)=>{element.addEventListener('click',(event)=>{
+     alert('Please Login!')
+   });
+   })
   
   

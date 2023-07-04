@@ -100,6 +100,8 @@ function errormessage(msg) {  //Error Messages Function
 
  }
 
+
+
  function redirectfunc(event) {   //Redirect function
     let a=document.createElement('a');
     a.href="../shop-page/index-shop.html"
@@ -147,5 +149,11 @@ Array.from(homepage).forEach((element)=>{element.addEventListener('click',(event
     a.href='../profile-page/index-profile.html';
     a.click();
     console.log('Profile button clicked')});
-    })
-  
+    });
+
+    let mycartbtn=document.getElementsByClassName('cart-btn');
+
+    Array.from(mycartbtn).forEach((element)=>{element.addEventListener('click',(event)=>{
+     alert('Please Login!')
+   });
+   })

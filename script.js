@@ -12,6 +12,7 @@ a.click();
 let loginbtn = document.getElementsByClassName('login-btn');
 let signupbtn = document.getElementsByClassName('signup-btn');
 let homepage=document.getElementsByClassName('home');
+let mycartbtn=document.getElementsByClassName('mycart-btn');
 let profilebtn=document.getElementsByClassName('profile-btn');
 console.log(homepage)
 
@@ -52,3 +53,11 @@ Array.from(profilebtn).forEach((element)=>{element.addEventListener('click',(eve
     console.log('Profile button clicked')});
     })
   
+Array.from(mycartbtn).forEach((element)=>{element.addEventListener('click',(event)=>{
+    alert('Please Login to access the Cart');
+        let a=document.createElement('a');
+        a.href='./login-page/index-login.html';
+        a.click();
+        console.log('login button clicked');
+    });
+})
