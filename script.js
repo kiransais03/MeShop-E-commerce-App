@@ -4,7 +4,7 @@ if(localStorage.getItem('accesstoken')) {
 
 function redirectfunc(event) {   //Redirect function
 let a=document.createElement('a');
-a.href="../shop-page/index-shop.html"
+a.href="./shop-page/index-shop.html"
 a.click();
 }
 
