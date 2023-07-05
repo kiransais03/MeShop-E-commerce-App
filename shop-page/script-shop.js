@@ -209,6 +209,8 @@ else {
     localStorage.setItem('cartelems',elemsarrstr);
     document.getElementsByClassName('cart-btn')[0].style.backgroundColor='skyblue'
     document.getElementsByClassName('cart-btn')[0].classList.add('blink');
+    document.getElementsByClassName('cart-btn')[0].style.padding='10px';
+    document.getElementsByClassName('cart-btn')[0].style.color='black';
 }
 }
 
