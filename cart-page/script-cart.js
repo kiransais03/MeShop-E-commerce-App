@@ -79,6 +79,7 @@ function redirectfunc(event) {   //Redirect function
     a.href="../login-page/index-login.html"
     a.click();
 }
+let grandtotal=0;
 
 if(cartelemsarr) {setTimeout(ordersummary,1000);}
 
@@ -90,7 +91,7 @@ let pricelistdiv=document.getElementsByClassName('price-list')[0];
 
 
 // let cardslist=Document.getElementsByClassName('card');
-let grandtotal=0;
+
 for(let i=0;i<cartelemsarr.length;i++)
 {
     let priceint=parseFloat(itempricelist[i].innerText.substring(1));
@@ -135,8 +136,48 @@ totaldiv.innerHTML=`<div class="left-item">
 }
 
 function btnclickeffect(event) {
-    event.target.classList.add('proceedbtn');
-    setTimeout(()=>{event.target.classList.remove('proceedbtn')},500);
+    try {
+    // event.target.classList.add('proceedbtn');
+    let inrPayment=parseInt(grandtotal*82.16);
+    // console.log('fsfadsfasdadf')
+    // setTimeout(()=>{event.target.classList.remove('proceedbtn')},500);
+    event.preventDefault();
+    var options = {
+      key: "rzp_test_xV39ZNbgU1Du4V", // Enter the Key ID generated from the Dashboard
+      amount: inrPayment * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      currency: "INR",
+      name: "MeShop. Checkout",
+      description: "This is your order", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+      theme: {
+        color: "#122620",
+      },
+      image: "https://cdn-icons-png.flaticon.com/128/891/891419.png",
+      handler: function () {
+        localStorage.removeItem("cartelems");
+        alert('Payment Successfull.Order has been placed,please forget your money!!!')
+        location.href = "./index-cart.html";
+      },
+      options: {
+        checkout: {
+          method: {
+            netbanking: 0,
+            card: 0,
+            upi: 1,
+            wallet: 0,
+          },
+        },
+      },
+    };
+  
+    // console.log('fsadf')
+    var rzpy1 = new Razorpay(options);
+    rzpy1.open();
+
+}catch (error) {console.log(error)}
 }
 
 
+// let payBtn = document.querySelector("#payBtn");
+// payBtn.addEventListener("click", (event) => {
+
+// });
