@@ -170,7 +170,9 @@ catch(error) {
 
 function cartitemstolocalstorage (currentcard,i) {
     if(localStorage.getItem('cartelems'))
-   {   
+   { 
+    document.getElementsByClassName('cart-btn')[0].style.backgroundColor='skyblue'
+    document.getElementsByClassName('cart-btn')[0].classList.add('blink');  
     let updated=0;
     let cartelemsarr=JSON.parse(localStorage.getItem('cartelems'));
     
@@ -205,6 +207,8 @@ else {
     let elemsarrstr=JSON.stringify(elemsarr);
     console.log(elemsarrstr,currentcard)
     localStorage.setItem('cartelems',elemsarrstr);
+    document.getElementsByClassName('cart-btn')[0].style.backgroundColor='skyblue'
+    document.getElementsByClassName('cart-btn')[0].classList.add('blink');
 }
 }
 
@@ -512,5 +516,16 @@ function ratingelemboolean (ratingval,currelement){
 // let inter=setInterval(()=>{console.log(typeof ratinginput.value)},3000);
 
 // // clearInterval(inter)
+
+
+if(localStorage.getItem('cartelems')) {
+    document.getElementsByClassName('cart-btn')[0].style.backgroundColor='skyblue';
+    document.getElementsByClassName('cart-btn')[0].style.color='black';
+    document.getElementsByClassName('cart-btn')[0].style.padding='10px';
+    document.getElementsByClassName('cart-btn')[0].classList.add('blink');
+}
+else {
+    document.getElementsByClassName('cart-btn')[0].style.backgroundColor='none'
+}
 
 
