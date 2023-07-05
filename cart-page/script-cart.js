@@ -2,7 +2,7 @@ let cartitemslist=document.getElementsByClassName('cartitems-list')[0];
 
 let cartelemsarr=JSON.parse(localStorage.getItem('cartelems'));
 
-if(cartelemsarr.length!==0) {
+if(cartelemsarr) {
 for(let i=0;i<cartelemsarr.length;i++)
 {
     let currentobj=JSON.parse(cartelemsarr[i]);
@@ -80,7 +80,7 @@ function redirectfunc(event) {   //Redirect function
     a.click();
 }
 
-if(cartelemsarr.length!==0) {setTimeout(ordersummary,1000);}
+if(cartelemsarr) {setTimeout(ordersummary,1000);}
 
 function ordersummary() {
 let itemnamelist=document.getElementsByClassName('name');

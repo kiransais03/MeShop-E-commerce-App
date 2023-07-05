@@ -255,6 +255,7 @@ function updateuserpasswordnames(emailid) {  //Update Names & Password
  logoutbtn.addEventListener('click',()=>{
      localStorage.removeItem('accesstoken');
      localStorage.removeItem('curruser');
+     if(localStorage.getItem('cartelems')) {localStorage.removeItem('cartelems')}
      let a=document.createElement('a');
      a.href="../index.html"
      a.click();
