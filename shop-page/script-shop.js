@@ -427,21 +427,47 @@ function elemcolorcheckingboolean (redto,blueto,greento,blackto,whiteto,currelem
     let blacktoval=blackto.checked;
     let whitetoval=whiteto.checked;
     let validation='pending'
-    if(redtoval){ if(currelement.color==='Red') {validation=true}  else{console.log('red');return false;} }
-    if(bluetoval){ if(currelement.color==='Blue') {validation=true} else{return false;} }
-    if(greentoval){ if(currelement.color==='Green') {validation=true} else{return false;} }
-    if(blacktoval){ if(currelement.color==='Black') {validation=true} else{return false;} }
-    if(whitetoval){ if(currelement.color==='White') {validation=true} else{return false;} }
-
-    if(validation='pending')
-    {
-      return true;
-    }
-
-    if(validation===true)
-    {
+    if (!redtoval && !bluetoval && !greentoval && !blacktoval && !whitetoval) {
+        // No color filters selected, so return true
         return true;
+      }
+    // console.log(redtoval)
+
+    // if (redtoval && currelement.color === 'Red') {
+    //     return true;
+    //   }
+    //   if (bluetoval && currelement.color === 'Blue') {
+    //     return true;
+    //   }
+    //   if (greentoval && currelement.color === 'Green') {
+    //     return true;
+    //   }
+    //   if (blacktoval && currelement.color === 'Black') {
+    //     return true;
+    //   }
+    //   if (whitetoval && currelement.color === 'White') {
+    //     return true;
+    //   }
+  
+    //   return false;
+
+//When multiple colours selected
+// let arr=[redtoval,bluetoval,greentoval,blacktoval,whitetoval];
+
+// let filteredarr=arr.filter((element)=>{if(!element){return false}else{return true}});
+
+//When single colour selected
+    if(redtoval){ if(currelement.color==='Red') {validation=true;return true;}  else{} }
+    if(bluetoval){ if(currelement.color==='Blue') {validation=true;return true;} else{} }
+    if(greentoval){ if(currelement.color==='Green') {validation=true;return true;} else{} }
+    if(blacktoval){ if(currelement.color==='Black') {validation=true;return true;} else{} }
+    if(whitetoval){ if(currelement.color==='White') {validation=true;return true;} else{} }
+
+    if(validation=='pending')
+    {
+      return false;
     }
+
 }catch(error) {console.log(error)}
   }
 
@@ -452,21 +478,22 @@ function elemsizecheckingboolean (sto,mto,lto,xlto,currelement) {
     let mtoval=mto.checked;
     let ltoval=lto.checked;
     let xltoval=xlto.checked;
-    let validation='pending'
-    if(stoval){ if(currelement.size==='S') {validation=true}  else{return false;} }
-    if(mtoval){ if(currelement.size==='M') {validation=true} else{return false;} }
-    if(ltoval){ if(currelement.size==='L') {validation=true} else{return false;} }
-    if(xltoval){ if(currelement.size==='XL') {validation=true} else{return false;} }
+    let validation='pending';
 
-    if(validation='pending')
-    {
-      return true;
-    }
-
-    if(validation===true)
+    if(!stoval && !mtoval && !ltoval && !xltoval)
     {
         return true;
     }
+    if(stoval){ if(currelement.size==='S') {validation=true;return true}  else{}} ;
+    if(mtoval){ if(currelement.size==='M') {validation=true;return true} else{} }
+    if(ltoval){ if(currelement.size==='L') {validation=true;return true} else{} }
+    if(xltoval){ if(currelement.size==='XL') {validation=true;return true} else{} }
+
+    if(validation=='pending')
+    {
+      return false;
+    }
+
 }catch(error) {console.log(error)}
   }
 
@@ -479,20 +506,21 @@ function elempricecheckingboolean (zeroto,twentyfiveto,fiftyto,hundredto,currele
   let fiftytoval=fiftyto.checked;
   let hundredtoval=hundredto.checked;
   let validation='pending'
-  if(zerotoval){ if(currelement.price>=0 && currelement.price<=25) {validation=true} else{return false;} }
-  if(twentyfivetoval){ if(currelement.price>=25 && currelement.price<=50) {validation=true} else{return false;} }
-  if(fiftytoval){ if(currelement.price>=50 && currelement.price<=100) {validation=true} else{return false;} }
-  if(hundredtoval){ if(currelement.price>=100) {validation=true} else{return false;} }
 
-  if(validation='pending')
+  if(!zerotoval && !twentyfivetoval && !fiftytoval && !hundredtoval)
   {
     return true;
   }
 
-  if(validation===true)
-    {
-        return true;
-    }
+  if(zerotoval){ if(currelement.price>=0 && currelement.price<=25) {validation=true;return true;} else{} }
+  if(twentyfivetoval){ if(currelement.price>=25 && currelement.price<=50) {validation=true;return true} else{} }
+  if(fiftytoval){ if(currelement.price>=50 && currelement.price<=100) {validation=true;return true} else{} }
+  if(hundredtoval){ if(currelement.price>=100) {validation=true;return true} else{} }
+
+  if(validation='pending')
+  {
+    return false;
+  }
 }catch(error) {console.log(error)}
 }
 
@@ -501,7 +529,7 @@ function elempricecheckingboolean (zeroto,twentyfiveto,fiftyto,hundredto,currele
 function ratingelemboolean (ratingval,currelement){
     try {
    let ratingnum=parseInt(ratingval);
-   if(currelement.rating.rate<=ratingnum)
+   if(currelement.rating.rate>=ratingnum)
    {
     // console.log('truerating',ratingnum,currelement.rating.rate)
     return true;
