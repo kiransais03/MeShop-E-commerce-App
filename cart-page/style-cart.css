@@ -209,7 +209,8 @@ border-radius: 12px;
     align-items: center;
     border-bottom: 3px solid orangered;
     min-width: 350px;
-    max-width: 400px;
+    max-width: 500px;
+    /* align-self: center; */
 }
 
 .right-item {
