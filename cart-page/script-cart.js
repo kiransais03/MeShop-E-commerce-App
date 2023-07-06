@@ -94,6 +94,7 @@ let pricelistdiv=document.getElementsByClassName('price-list')[0];
 
 for(let i=0;i<cartelemsarr.length;i++)
 {
+  console.log(itempricelist[i]);
     let priceint=parseFloat(itempricelist[i].innerText.substring(1));
    let itemsummarydiv=document.createElement('div');
    let costofitems=priceint*parseInt(itemcountlist[i].innerText);
@@ -115,6 +116,7 @@ for(let i=0;i<cartelemsarr.length;i++)
 }
 let totaldiv=document.createElement('div');
 totaldiv.classList.add('totalprice');
+
 totaldiv.innerHTML=`<div class="left-item">
                             <div>Grand Total </div>
                             </div>
@@ -122,13 +124,13 @@ totaldiv.innerHTML=`<div class="left-item">
                               <div>-</div>
                             </div>
                             <div class="right-item">
-                            <div>$${grandtotal}</div>
+                            <div>$${grandtotal.toFixed(2)}</div>
                             </div>`
     pricelistdiv.append(totaldiv);
 
   let chekoutbtn=document.createElement('button');
   chekoutbtn.innerText='Proceed To Checkout';
-  chekoutbtn.classList.add('checkout-btn');
+  chekoutbtn.className='checkout-btn btn btn-primary';
   pricelistdiv.append(chekoutbtn);
 
   chekoutbtn.addEventListener('click',btnclickeffect);

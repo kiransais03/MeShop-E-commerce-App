@@ -158,6 +158,9 @@ marquee {
 .card h4 {
     margin: 3px 0; ;
     padding: 0;
+    line-height: 24px;
+    font-weight: 700;
+    font-size: 16px;
 }
 
 .card .colors button {
@@ -205,6 +208,8 @@ border-radius: 12px;
     justify-content: space-between;
     align-items: center;
     border-bottom: 3px solid orangered;
+    min-width: 350px;
+    max-width: 400px;
 }
 
 .right-item {
@@ -227,7 +232,7 @@ border-radius: 12px;
 
 .checkout-btn {
     height: 45px;
-    background-color: lightblue;
+    /* background-color: goldenrod; */
     cursor: pointer;
     border-radius: 5px;
 }
